@@ -1,25 +1,19 @@
 from canbo import CanBo
 
 class KySu(CanBo):
-    def __init__(self , maCanBo="" , ten="" , tuoi=0 , gioiTinh="" , diaChi="" , luongCoBan=0.0 , bac=1) -> None:
+    def __init__(self , maCanBo="" , ten="" , tuoi=0 , gioiTinh="" , diaChi="" , luongCoBan=0.0 , nganhDaoTao="") -> None:
         super().__init__(maCanBo , ten , tuoi , gioiTinh , diaChi , luongCoBan)
-        if(int(bac) <= 0 or int(bac) > 10):
-            self.__bac = 1
-        else:
-            self.__bac = int(bac)
+        self.__nganhDaoTao = nganhDaoTao
         
         
-    def get_bac(self) ->int:
-        return self.__bac
+    def get_nganhDaoTao(self) ->str:
+        return self.__nganhDaoTao
 
-    def set_bac(self, bac):
-        if(bac <= 0 or bac > 10):
-            self.__bac = 1
-        else:
-            self.__bac = bac
+    def set_nganhDaoTao(self, nganhDaoTao):
+        self.__nganhDaoTao = nganhDaoTao
 
     def luong(self) ->float:
         return super().get_luongCoBan() * 1.7
     
     def __str__(self) -> str:
-        return super().__str__() + f" bac: {self.get_bac()} luong: {self.luong()} chucvu: KySu"
+        return super().__str__() + f" nganhDaoTao: {self.get_nganhDaoTao()} luong: {self.luong()} chucvu: KySu"

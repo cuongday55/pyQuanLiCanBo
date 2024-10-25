@@ -19,14 +19,14 @@ while True:
             gioiTinh = input("nhap gioi tinh can bo: ")
             diaChi = input("nhap dia chi can bo: ")
             luongCB = input("nhap luong can bo: ")
-            bac = input("nhap bac can bo: ")
+            nganh = input("nhap bac can bo: ")
             hasMa = True
             for cb in dsCanBo:
                 if(cb.get_maCanBo() == ma):
                     hasMa = False
                     break
             if(hasMa):   
-                ks = KySu(ma , ten , tuoi , gioiTinh , diaChi ,luongCB , bac)
+                ks = KySu(ma , ten , tuoi , gioiTinh , diaChi ,luongCB , nganh)
                 dsCanBo.append(ks)
             else:
                 print("ma da ton tai!")
@@ -45,8 +45,8 @@ while True:
                     break
                     
             if(hasMa):   
-                ks = KySu(ma , ten , tuoi , gioiTinh , diaChi ,luongCB , bac)
-                dsCanBo.append(ks)
+                cn = CongNhan(ma , ten , tuoi , gioiTinh , diaChi ,luongCB , bac)
+                dsCanBo.append(cn)
             else:
                 print("ma da ton tai!")
         elif(tmp == "3"):
@@ -56,7 +56,7 @@ while True:
             gioiTinh = input("nhap gioi tinh can bo: ")
             diaChi = input("nhap dia chi can bo: ")
             luongCB = input("nhap luong can bo: ")
-            bac = input("nhap bac can bo: ")
+            congViec = input("nhap congViec can bo: ")
             hasMa = True
             for cb in dsCanBo:
                 if(cb.get_maCanBo() == ma):
@@ -64,8 +64,8 @@ while True:
                     break
                     
             if(hasMa):   
-                ks = KySu(ma , ten , tuoi , gioiTinh , diaChi ,luongCB , bac)
-                dsCanBo.append(ks)
+                nv = NhanVien(ma , ten , tuoi , gioiTinh , diaChi ,luongCB , congViec)
+                dsCanBo.append(nv)
             else:
                 print("ma da ton tai!")
         else:
