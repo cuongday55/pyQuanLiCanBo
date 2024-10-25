@@ -1,8 +1,5 @@
 
-while True:
-    if(1 == 1):
-        print(1)
-        break
-    print(2)
-
-print(3)
+if("a111".__contains__("1")):
+    print("true")
+else:
+    print("false")
